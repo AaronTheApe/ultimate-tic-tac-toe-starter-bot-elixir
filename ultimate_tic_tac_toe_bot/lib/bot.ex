@@ -1,6 +1,5 @@
 defmodule Bot do
    def main(_) do
-
       outputter = CommandOutputter.start()
       strategy = RandomStrategy.start(outputter)
       logic = SimpleGameLogic.start(strategy)

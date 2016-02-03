@@ -1,8 +1,7 @@
 defmodule CommandParser do
-
   def start(game_engine) do
-      {:ok, parser} = Task.start_link(fn->parse_message(game_engine) end)
-      parser
+    {:ok, parser} = Task.start_link(fn->parse_message(game_engine) end)
+    parser
   end
 
   def send_message(parser, m) do
@@ -13,7 +12,7 @@ defmodule CommandParser do
   defp parse(game_engine, ["settings", "time_per_move", val]), do: send(game_engine, {:time_per_move, String.to_integer(val)})
   defp parse(game_engine, ["settings", "player_names", val]), do: send(game_engine, {:player_names, String.split(val, ",")})
   defp parse(game_engine, ["settings", "your_bot", val]), do: send(game_engine, {:bot_name, val})
-  defp parse(game_engine, ["settings", "your_bot_id", val]), do: send(game_engine, {:bot_id, String.to_integer(val)})
+  defp parse(game_engine, ["settings", "your_botid", val]), do: send(game_engine, {:botid, String.to_integer(val)})
 
   defp parse(game_engine, ["update", "game", "round", val]), do: send(game_engine, {:game_round, String.to_integer(val)})
   defp parse(game_engine, ["update", "game", "move", val]), do: send(game_engine, {:game_move, String.to_integer(val)})
@@ -27,12 +26,12 @@ defmodule CommandParser do
   end
 
   def parse_message(game_engine) do
-     receive do
-        {:message, :eof} -> nil
-        {:message, msg} ->
-          parse game_engine, String.split msg
-        _ -> send game_engine, {:error, "Invalid Message Received"}
-     end
-     parse_message(game_engine)
+    receive do
+      {:message, :eof} -> nil
+      {:message, msg} ->
+        parse game_engine, String.split msg
+      _ -> send game_engine, {:error, "Invalid Message Received"}
+    end
+    parse_message(game_engine)
   end
 end

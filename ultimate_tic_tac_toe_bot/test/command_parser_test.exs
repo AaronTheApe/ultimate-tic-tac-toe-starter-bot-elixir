@@ -29,7 +29,7 @@ defmodule CommandParserTest do
     CommandParserMacro.test_communication "updates time_per_move", "settings time_per_move 500", :time_per_move, 500
     CommandParserMacro.test_communication "updates player_names", "settings player_names player1,player2", :player_names, ["player1","player2"]
     CommandParserMacro.test_communication "updates bot_name", "settings your_bot player1", :bot_name, "player1"
-    CommandParserMacro.test_communication "updates bot_id", "settings your_bot_id 1", :bot_id, 1
+    CommandParserMacro.test_communication "updates botid", "settings your_botid 1", :botid, 1
 
     CommandParserMacro.test_communication "updates game_round", "update game round 1", :game_round, 1
     CommandParserMacro.test_communication "updates game_move", "update game move 1", :game_move, 1
