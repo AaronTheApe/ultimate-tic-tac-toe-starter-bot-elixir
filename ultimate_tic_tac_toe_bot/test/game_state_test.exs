@@ -24,13 +24,25 @@ defmodule GameStateTest do
    use ExUnit.Case
    require GameStateTestMacro
    test "should have correct initial state" do
-       assert %{:timebank => 0, :time_per_move => 0,
-                :bot_name =>"",
-                :opponent_bot_name => ""} == GameState.initial()
+     assert %{:timebank => 0,
+              :time_per_move => 0,
+              :player_names => [],
+              :bot_name => "",
+              :bot_id => 0,
+              :game_round => 0,
+              :game_move => 0,
+              :game_field => [],
+              :game_macroboard => []
+             } == GameState.initial()
    end
 
    GameStateTestMacro.test_state "should set timebank", :timebank, :set_timebank, 1000, 100
    GameStateTestMacro.test_state "should set time per move", :time_per_move, :set_time_per_move, 500, 50
+   GameStateTestMacro.test_state "should set player names", :player_names, :set_player_names, ["bot5", "bot6"], ["bot1", "bot2"]
    GameStateTestMacro.test_state "should set bot name", :bot_name, :set_bot_name,"bot1", "bot2"
-   GameStateTestMacro.test_state "should set opponent name", :opponent_bot_name, :set_opponent_bot_name,"bot2", "bot1"
+   GameStateTestMacro.test_state "should set bot id", :bot_id, :set_bot_id, 1, 2
+   GameStateTestMacro.test_state "should set game round", :game_round, :set_game_round, 1, 2
+   GameStateTestMacro.test_state "should set game move", :game_move, :set_game_move, 1, 2
+   GameStateTestMacro.test_state "should set game field", :game_field, :set_game_field, [1, 2, 3, 4], [3, 2, 4, 5]
+   GameStateTestMacro.test_state "should set game macroboard", :game_macroboard, :set_game_macroboard, [1, 2, 3, 4], [3, 2, 4, 5]
 end
