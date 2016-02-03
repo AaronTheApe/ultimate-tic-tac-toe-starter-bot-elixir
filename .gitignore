@@ -7,3 +7,6 @@ erl_crash.dump
 *.zip
 test.exs
 *.zip
+ultimate_tic_tac_toe_bot/_build/dev/lib/ultimate_tic_tac_toe_bot/.compile.lock
+ultimate_tic_tac_toe_bot/_build/dev/lib/ultimate_tic_tac_toe_bot/.compile.elixir
+ultimate_tic_tac_toe_bot/_build/test/lib/ultimate_tic_tac_toe_bot/.compile.elixir
