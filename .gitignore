@@ -10,3 +10,4 @@ test.exs
 ultimate_tic_tac_toe_bot/_build/dev/lib/ultimate_tic_tac_toe_bot/.compile.lock
 ultimate_tic_tac_toe_bot/_build/dev/lib/ultimate_tic_tac_toe_bot/.compile.elixir
 ultimate_tic_tac_toe_bot/_build/test/lib/ultimate_tic_tac_toe_bot/.compile.elixir
+ultimate_tic_tac_toe_bot/_build/dev/lib/ultimate_tic_tac_toe_bot/ebin/ultimate_tic_tac_toe_bot.app
