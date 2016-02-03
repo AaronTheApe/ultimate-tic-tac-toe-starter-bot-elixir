@@ -57,7 +57,6 @@ defmodule SimpleGameLogicTest do
 
   LogicTestMacro.test_setting "should set timebank", :initial_timebank, :set_timebank, 100
   LogicTestMacro.test_setting "should set time per move", :time_per_move, :set_time_per_move, 50
-  LogicTestMacro.test_setting "should set max rounds", :max_rounds, :set_max_rounds, 50
   LogicTestMacro.test_setting "should set bot name", :bot_name, :set_bot_name, "player1"
   LogicTestMacro.test_setting "should set opponent bot name", :opponent_bot_name, :set_opponent_bot_name, "player2"
   LogicTestMacro.test_setting "should set starting_armies", :starting_armies, :set_starting_armies, 5

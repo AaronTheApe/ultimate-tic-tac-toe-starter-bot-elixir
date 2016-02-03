@@ -14,7 +14,7 @@ defmodule GameState do
     require GameStateMacro
     def initial() do
         %{:timebank => 0, :time_per_move=>0,
-          :max_rounds=> 0, :bot_name =>"", :opponent_bot_name => "",
+          :bot_name =>"", :opponent_bot_name => "",
           :starting_armies => 0,
           :starting_regions => [],
           :starting_pick_amount => 0,
@@ -27,7 +27,6 @@ defmodule GameState do
 
     GameStateMacro.create_updater "timebank"
     GameStateMacro.create_updater "time_per_move"
-    GameStateMacro.create_updater "max_rounds"
     GameStateMacro.create_updater "bot_name"
     GameStateMacro.create_updater "opponent_bot_name"
     GameStateMacro.create_updater "starting_armies"

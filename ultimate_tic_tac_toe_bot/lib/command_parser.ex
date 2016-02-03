@@ -18,7 +18,6 @@ defmodule CommandParser do
 
   defp parse(game_engine, ["settings", "timebank", val]), do: send(game_engine, {:initial_timebank, String.to_integer(val)})
   defp parse(game_engine, ["settings", "time_per_move", val]), do: send(game_engine, {:time_per_move, String.to_integer(val)})
-  defp parse(game_engine, ["settings", "max_rounds", val]), do: send(game_engine, {:max_rounds, String.to_integer(val)})
   defp parse(game_engine, ["settings", "your_bot", val]), do: send(game_engine, {:bot_name, val})
   defp parse(game_engine, ["settings", "opponent_bot", val]), do: send(game_engine, {:opponent_bot_name, val})
   defp parse(game_engine, ["settings", "starting_armies", val]), do: send(game_engine, {:starting_armies, String.to_integer(val)})

@@ -30,7 +30,7 @@ defmodule GameStateTest do
    require GameStateTestMacro
    test "should have correct initial state" do
        assert %{:timebank => 0, :time_per_move => 0,
-                :max_rounds => 0, :bot_name =>"",
+                :bot_name =>"",
                 :opponent_bot_name => "",
                 :starting_armies => 0,
                 :starting_regions => [],
@@ -44,7 +44,6 @@ defmodule GameStateTest do
 
    GameStateTestMacro.test_state "should set timebank", :timebank, :set_timebank, 1000, 100
    GameStateTestMacro.test_state "should set time per move", :time_per_move, :set_time_per_move, 500, 50
-   GameStateTestMacro.test_state "should set max rounds", :max_rounds, :set_max_rounds, 100, 200
    GameStateTestMacro.test_state "should set bot name", :bot_name, :set_bot_name,"bot1", "bot2"
    GameStateTestMacro.test_state "should set opponent name", :opponent_bot_name, :set_opponent_bot_name,"bot2", "bot1"
    GameStateTestMacro.test_state "should set starting armies", :starting_armies, :set_starting_armies,3, 5

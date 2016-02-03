@@ -33,7 +33,6 @@ defmodule CommandParserTest do
     CommandParserMacro.test_communication "Returns attack/transfer", "go attack/transfer 10000", :attack_transfer, ""
     CommandParserMacro.test_communication "updates timebank", "settings timebank 1000", :initial_timebank, 1000
     CommandParserMacro.test_communication "updates time_per_move", "settings time_per_move 500", :time_per_move, 500
-    CommandParserMacro.test_communication "updates max_round", "settings max_rounds 100", :max_rounds, 100
     CommandParserMacro.test_communication "updates bot_name", "settings your_bot player1", :bot_name, "player1"
     CommandParserMacro.test_communication "updates opponent bot_name", "settings opponent_bot player2", :opponent_bot_name, "player2"
     CommandParserMacro.test_communication "updates starting armies", "settings starting_armies 3", :starting_armies, 3

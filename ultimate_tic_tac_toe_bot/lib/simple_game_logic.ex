@@ -38,7 +38,6 @@ defmodule SimpleGameLogic do
   end
 
   GameLogicMacro.create_handle_func "time_per_move"
-  GameLogicMacro.create_handle_func "max_rounds"
   GameLogicMacro.create_handle_func "bot_name"
   GameLogicMacro.create_handle_func "opponent_bot_name"
   GameLogicMacro.create_handle_func "starting_armies"
