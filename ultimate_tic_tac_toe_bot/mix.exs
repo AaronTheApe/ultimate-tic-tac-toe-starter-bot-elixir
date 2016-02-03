@@ -1,8 +1,8 @@
-defmodule Warlight2Bot.Mixfile do
+defmodule UltimateTicTacToeBot.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :warlight2_bot,
+    [app: :ultimate_tic_tac_toe_bot,
      version: "0.0.1",
      elixir: "~> 1.0",
      escript: escript_config,
@@ -16,7 +16,7 @@ defmodule Warlight2Bot.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [applications: [:logger],
-     mod: {Warlight2Bot, []}]
+     mod: {UltimateTicTacToeBot, []}]
   end
 
   # Dependencies can be Hex packages:
