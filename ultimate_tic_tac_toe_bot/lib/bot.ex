@@ -1,10 +1,10 @@
 defmodule Bot do
    def main(_) do
-      outputter = CommandOutputter.start()
-      strategy = CompleterStrategy.start(outputter)
-      logic = SimpleGameLogic.start(strategy)
-      command_parser = CommandParser.start(logic)
-      run_input_loop( command_parser)
+      CommandOutputter.start
+      |> CompleterStrategy.start
+      |> SimpleGameLogic.start
+      |> CommandParser.start
+      |> run_input_loop
    end
 
    def run_input_loop(parser) do
